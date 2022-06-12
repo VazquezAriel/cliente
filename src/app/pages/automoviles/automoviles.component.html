@@ -1,0 +1,24 @@
+<h2>Crear Auto</h2>
+
+
+    <label for="txtPlaca">Placa: </label>
+    <input pInputText size="40" id="txtPlaca" name="txtPlaca" type="text" [(ngModel)]="auto.placa" />
+    <br />
+    <label for="txtColor">Color: </label>
+    <input pInputText size="40" id="txtColor" name="txtColor" type="text" [(ngModel)]="auto.color" />
+    <br />
+    <label for="txtMarca">Marca:</label>
+    <input pInputText size="40" id="txtMarca" name="txtMarca" type="text" [(ngModel)]="auto.marca" />
+    <br />
+    <label for="txtTipo">Tipo:  </label>
+    <input pInputText size="40" id="txtTipo" name="txtTipo" type="text" [(ngModel)]="auto.tipo" />
+    <br />
+    <br />
+    <button (click)="guardar()">Guardar</button>
+
+    <h2>Listado de Autos</h2>
+    <ul>
+        <li *ngFor="let auto of autos | async">
+            {{auto.placa}} - {{auto.color}} - {{auto.marca}}- {{auto.tipo}}
+        </li>
+    </ul>
