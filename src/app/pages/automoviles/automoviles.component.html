@@ -1,35 +1,11 @@
-<h2>Crear Auto</h2>
+<h2>CMis datos</h2>
 
 
-    <label for="txtPlaca">Placa: </label>
-    <input pInputText size="40" id="txtPlaca" name="txtPlaca" type="text" [(ngModel)]="auto.placa" />
+    <label for="txtPlaca">Estos son mis datos: </label>
     <br />
-    <label for="txtColor">Color: </label>
-    <input pInputText size="40" id="txtColor" name="txtColor" type="text" [(ngModel)]="auto.color" />
     
-
-
     <br />
-    <label for="txtMarca">Marca:</label>
-    <input pInputText size="40" id="txtMarca" name="txtMarca" type="text" [(ngModel)]="auto.marca" />
+    <label for="txtMarca">{{cliente}}</label>
     <br />
-    <label for="txtTipo">Tipo:  </label>
-    <input pInputText size="40" id="txtTipo" name="txtTipo" type="text" [(ngModel)]="auto.tipo" />
     <br />
-    <label for="txtImagen">Imagen:</label>
-    <input pInputText size="40" id="inImagen" type="file" accept=".png, .jpg, .jpeg" (change)="mostrarImagen($event)">
-    <br>
 
-    <br>
-    <img src="{{imagen}}" alt="Imagen subida" style="display:inline-block;margin:2px 0 2px 2px" width="280">
-    <br>
-    <br />
-    <button (click)="guardar()">Guardar</button>
-
-
-    <h2>Listado de Autos</h2>
-    <ul>
-        <li *ngFor="let auto of autos | async">
-            {{auto.placa}} - {{auto.color}} - {{auto.marca}}- {{auto.tipo}} -  <img src="data:image/png;base64,{{auto.imagen}}"  style="display:inline-block;margin:2px 0 2px 2px" width="280">
-        </li>
-    </ul>
